@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+group 'org.eugeneworks'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Main-Class': 'org.eugeneworks.befunge_interpreter.Main')
+    }
+}
